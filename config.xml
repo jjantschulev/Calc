@@ -11,7 +11,7 @@
   <name>Calc+</name>
   <preference name="fullscreen" value="true" />
   <preference name="orientation" value="portrait" />
-
+  <preference name="android-windowSoftInputMode" value="stateHidden"/>
 
   <description>
       Fully black calculator.
