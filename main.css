@@ -1,0 +1,124 @@
+body {
+  background: black;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", "Helvetica Neue", sans-serif;
+  font-weight: lighter;
+  font-size: 40px;
+  color: white;
+
+
+  overflow: hidden;
+
+}
+
+#result {
+  width: 100%;
+  height: 30vh;
+  display: block;
+
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  overflow-x: scroll;
+}
+
+#result::-webkit-scrollbar {
+  width: 1px;
+  height: 1px;
+}
+
+#result::-webkit-scrollbar-track {
+  -webkit-box-shadow: none;
+  border-radius: 0px;
+}
+
+#result::-webkit-scrollbar-thumb {
+  border-radius: 0px;
+  background-color: #fa0;
+  -webkit-box-shadow: none;
+}
+
+#result p {
+  margin: 0;
+  width: calc(100% - 60px);
+  font-size: 75px;
+  margin: 0 30px;
+  text-align: right;
+  white-space: nowrap;
+  outline: none;
+  caret-color: #fa0;
+
+  user-select: all;
+}
+
+#result p::selection {
+  background-color: #ffee22;
+  color: black;
+}
+
+
+
+
+
+
+.buttons {
+  width: 100%;
+  height: 70vh;
+
+  user-select: none;
+  text-align: center;
+}
+
+.scientific {
+  width: 100%;
+  height: 35%;
+  font-size: 25px;
+
+  color : #f0f0f0;
+}
+
+.sci_btn {
+  width: 20%;
+  height: 33.33%;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.numbers {
+  width: 60%;
+  height: 65%;
+  float: left;
+  font-size: 32px;
+
+  color: #fafafa;
+}
+
+.num_btn {
+  width: 33.33%;
+  height: 25%;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.operations {
+  width: 40%;
+  height: 65%;
+  float: left;
+  font-size: 30px;
+
+  color: #fa0;
+}
+
+.opr_btn {
+  width: 50%;
+  height: 25%;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
