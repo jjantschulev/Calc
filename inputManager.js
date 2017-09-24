@@ -8,7 +8,11 @@ function InputManager() {
     input.setCaret()
   }
   this.viewBox.onfocus = function () {
-    SoftKeyboard.hide();
+    SoftKeyboard.hide(function () {
+      alert('Keyboard Hidden');
+    }, function () {
+      alert('fail');
+    });
   }
   this.caretPos = 0;
   this.showingAnswer = false;
