@@ -8,11 +8,16 @@ function InputManager() {
     input.setCaret()
   }
   this.viewBox.onfocus = function () {
-    plugins.SoftKeyboard.hide(function () {
-      alert('Keyboard Hidden');
-    }, function () {
-      alert('fail');
-    });
+    try {
+      plugins.SoftKeyboard.hide(function () {
+        alert('Keyboard Hidden');
+      }, function () {
+        alert('fail');
+      });
+    } catch (e) {
+      input.add('error!!!!! ')
+    }
+
   }
   this.caretPos = 0;
   this.showingAnswer = false;
@@ -93,6 +98,30 @@ function InputManager() {
 
 
 }
+
+alert('hello');
+
+var state = false;
+setInterval(function () {
+  if(state){
+    alert('showing');
+    state = false;
+    try {
+      plugins.SoftKeyboard.show();
+    } catch (e) {
+      input.add('error! ');
+    }
+
+  } else {
+    alert('hiding');
+    state = true;
+    try {
+      plugins.SoftKeyboard.hide();
+    } catch (e) {
+      input.add('error! ');
+    }
+  }
+}, 2000);
 
 String.prototype.splice = function(idx, rem, str) {
   return this.slice(0, idx) + str + this.slice(idx + Math.abs(rem));
