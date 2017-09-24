@@ -104,7 +104,7 @@ alert('hello');
 var state = false;
 setInterval(function () {
   if(state){
-    alert('showing');
+    // alert('showing');
     state = false;
     try {
       plugins.SoftKeyboard.show();
@@ -113,7 +113,7 @@ setInterval(function () {
     }
 
   } else {
-    alert('hiding');
+    // alert('hiding');
     state = true;
     try {
       plugins.SoftKeyboard.hide();
