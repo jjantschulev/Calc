@@ -5,10 +5,17 @@ function InputManager() {
   this.viewBox.focus();
   this.viewBox.onblur = function () {
     input.viewBox.focus();
-    input.setCaret()
+    input.setCaret();
+    SoftKeyboard.hide();
   }
   this.viewBox.onfocus = function () {
     SoftKeyboard.hide();
+    setTimeout(function () {
+      SoftKeyboard.hide();
+    }, 10);
+    setTimeout(function () {
+      SoftKeyboard.hide();
+    }, 100);
   }
   this.caretPos = 0;
   this.showingAnswer = false;
