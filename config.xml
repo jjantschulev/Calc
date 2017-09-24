@@ -21,4 +21,6 @@
       Jordan Jantschulev
   </author>
 
+  <plugin spec="https://github.com/phonostar/PhoneGap-SoftKeyboard.git" />
+
 </widget>

@@ -7,6 +7,9 @@ function InputManager() {
     input.viewBox.focus();
     input.setCaret()
   }
+  this.viewBox.onfocus = function () {
+    SoftKeyboard.hide();
+  }
   this.caretPos = 0;
   this.showingAnswer = false;
   this.deleteTimeout;
@@ -83,6 +86,7 @@ function InputManager() {
   this.deleteButton.addEventListener('ontouchend', function () {
     clearTimeout(input.deleteTimeout);
   });
+
 
 }
 
