@@ -9,7 +9,7 @@ function InputManager() {
   }
   this.viewBox.onfocus = function () {
     try {
-      plugins.SoftKeyboard.hide(function () {
+      SoftKeyboard.hide(function () {
         alert('Keyboard Hidden');
       }, function () {
         alert('fail');
@@ -107,7 +107,7 @@ setInterval(function () {
     // alert('showing');
     state = false;
     try {
-      plugins.SoftKeyboard.show();
+      SoftKeyboard.show();
     } catch (e) {
       input.add('error! ');
     }
@@ -116,7 +116,7 @@ setInterval(function () {
     // alert('hiding');
     state = true;
     try {
-      plugins.SoftKeyboard.hide();
+      SoftKeyboard.hide();
     } catch (e) {
       input.add('error! ');
     }
