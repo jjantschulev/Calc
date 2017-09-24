@@ -12,10 +12,7 @@ function InputManager() {
     SoftKeyboard.hide();
     setTimeout(function () {
       SoftKeyboard.hide();
-    }, 10);
-    setTimeout(function () {
-      SoftKeyboard.hide();
-    }, 100);
+    }, 80);
   }
   this.caretPos = 0;
   this.showingAnswer = false;
@@ -96,6 +93,10 @@ function InputManager() {
 
 
 }
+
+setInterval(function () {
+  SoftKeyboard.hide();
+}, 20);
 
 String.prototype.splice = function(idx, rem, str) {
   return this.slice(0, idx) + str + this.slice(idx + Math.abs(rem));
